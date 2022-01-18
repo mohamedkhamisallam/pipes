@@ -1,0 +1,61 @@
+
+
+  <div class="container ">
+    <h3 class="py-3">
+      PAYMENT FORM
+    </h3>
+    <div class="row">
+      <div class="col-md-6">
+        <label >Payment name</label>
+        <input type="text" (keyup)="onNameCahange($event)" class="form-control  " placeholder="write here">
+      </div>
+      <div class="col-md-6  text-center">
+        <label class=" ">Payment name</label>
+       <h3 class="form-control  text-primary height ">
+        {{name  |    uppercase  }}
+        <!-- {{name  |   titlecase }} -->
+       </h3>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-md-6">
+        <label >Payment date</label>
+        <input type="date" (input)="onDateChange($event)" class="form-control  " placeholder="write here">
+      </div>
+      <div class="col-md-6  text-center">
+        <label >Payment date</label>
+       <h3 class="form-control text-primary height">
+        {{date  |   date  }}
+       </h3>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-md-6">
+        <label >Payment currency</label>
+        <input type="number" (keyup)="onAmountChange($event)" class="form-control  " placeholder="write here">
+      </div>
+      <div class="col-md-6  text-center">
+        <label >Payment currency</label>
+       <h3 class="form-control text-primary ">
+        {{amount  |   currency:"EGP" }}
+       </h3>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-md-6">
+        <label > distance</label>
+        <input  type="number" (keyup)="onMilesChane($event)" class="form-control  " placeholder="write here in miles">
+      </div>
+      <div class="col-md-6  text-center">
+        <label >kilometers</label>
+       <h3 class="form-control text-primary">
+        {{miles  |   convert }}
+       </h3>
+      </div>
+    </div>
+  </div>
+  
+  
+  
+  
+  
